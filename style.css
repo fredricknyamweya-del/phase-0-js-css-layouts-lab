@@ -1,4 +1,25 @@
-/* Step 4: Style the Cat Breed Container */
+/* ===== Global Styles ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5em;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* ===== Cat Breed Container ===== */
 .cat-container {
   display: flex;
   flex-wrap: wrap;
@@ -6,8 +27,8 @@
   padding: 2em;
 }
 
-/* Step 4: Style Each Cat Breed Card */
-.cat-card {
+/* ===== Cat Breed Cards ===== */
+.cat-breed {
   flex: 1 1 300px;
   margin: 1em;
   padding: 1em;
@@ -15,40 +36,52 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   text-align: center;
+  background-color: #fff;
   transition: transform 0.3s;
 }
 
-/* Images inside cards */
-.cat-card img {
+.cat-breed img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
-/* Headings inside cards */
-.cat-card h2 {
+.cat-breed h2 {
   margin: 0.5em 0;
 }
 
-/* Paragraphs inside cards */
-.cat-card p {
+.cat-breed p {
   margin: 0.5em 0 1em;
 }
 
-/* Step 5: Responsive Layout */
+.cat-breed a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #0077cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.cat-breed a:hover {
+  background-color: #005fa3;
+}
+
+/* ===== Responsive Layout ===== */
 @media (max-width: 768px) {
   .cat-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .cat-card {
+  .cat-breed {
     flex: 1 1 100%;
     max-width: 100%;
   }
 }
 
-/* Step 6: Hover Effect */
-.cat-card:hover {
+/* ===== Hover Effect ===== */
+.cat-breed:hover {
   transform: scale(1.05);
 }
